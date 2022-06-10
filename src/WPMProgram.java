@@ -18,9 +18,10 @@ public class WPMProgram {
         System.out.println("1");
         TimeUnit.SECONDS.sleep(1);
 
-        String typeThis = words[rand.nextInt(9)];
         Random rand = new Random();
-        for (int i = 0; i < 10; i++) {
+        String typeThis = words[rand.nextInt(9)];
+
+        for (int i = 0; i < 1; i++) {
             System.out.print(typeThis + " ");
         }
         System.out.println();
@@ -30,11 +31,16 @@ public class WPMProgram {
         Scanner scan = new Scanner(System.in);
         String typedWords = scan.nextLine();
         
-        if (typeThis != typedWords):
-            System.out.println("Sorry, but you have not typed it correctly");
-            Sys.exit(0);
-        else:
-            System.out.println("You have typed it correctly")
+        if (typeThis == typedWords) {
+            System.out.println("You have typed it correctly");
+        }
+        else if(typeThis != typedWords) {
+            System.out.println("You have  not typed it correctly");
+            System.exit(0);
+        }
+        else {
+            System.exit(0);
+        }
 
         double end = LocalTime.now().toNanoOfDay();
         double elapsedTime = end - start;
