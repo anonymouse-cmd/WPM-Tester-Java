@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 public class WPMProgram {
 
-    public static String[] words = {"envelope", "can", "cap", "Devon", "super", "boy", "girl", "Women", "Men", "code"};
+    public static String[] words = {"Please take your dog, Cali, out for a walk – he really needs some exercise!", "Rex Quinfrey, a renowned scientist, created plans for an invisibility machine.", "What a beautiful day it is on the beach, here in beautiful and sunny Hawaii.", "Do you know why all those chemicals are so hazardous to the environment?", "You never did tell me how many copper pennies where in that jar; how come?", "Max Joykner sneakily drove his car around every corner looking for his dog", "The two boys collected twigs outside, for over an hour, in the freezing cold!", "When do you think they will get back from their adventure in Cairo, Egypt?", "Trixie and Veronica, our two cats, just love to play with their pink ball of yarn.", "We climbed to the top of the mountain in just under two hours; isn’t that great?"};
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -18,9 +18,10 @@ public class WPMProgram {
         System.out.println("1");
         TimeUnit.SECONDS.sleep(1);
 
+        String typeThis = words[rand.nextInt(9)];
         Random rand = new Random();
         for (int i = 0; i < 10; i++) {
-            System.out.print(words[rand.nextInt(9)] + " ");
+            System.out.print(typeThis + " ");
         }
         System.out.println();
 
@@ -28,6 +29,12 @@ public class WPMProgram {
 
         Scanner scan = new Scanner(System.in);
         String typedWords = scan.nextLine();
+        
+        if (typeThis != typedWords):
+            System.out.println("Sorry, but you have not typed it correctly");
+            Sys.exit(0);
+        else:
+            System.out.println("You have typed it correctly")
 
         double end = LocalTime.now().toNanoOfDay();
         double elapsedTime = end - start;
