@@ -17,7 +17,8 @@ public class WPMProgram {
         "The two boys collected twigs outside, for over an hour, in the freezing cold!",
         "When do you think they will get back from their adventure in Cairo, Egypt?",
         "Trixie and Veronica, our two cats, just love to play with their pink ball of yarn.",
-        "We climbed to the top of the mountain in just under two hours; isn’t that great?"
+        "We climbed to the top of the mountain in just under two hours; isn’t that great?",
+        "That herd of bison seems to be moving quickly; does that seem normal to you?"
     };
 
     public static void main(String[] args) throws InterruptedException {
@@ -32,7 +33,7 @@ public class WPMProgram {
         TimeUnit.SECONDS.sleep(1);
 
         Random rand = new Random();
-        String typeThis = words[rand.nextInt(9)];
+        String typeThis = words[rand.nextInt(10)];
 
         out.println("GO!");
 
